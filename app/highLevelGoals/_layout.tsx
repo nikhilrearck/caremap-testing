@@ -15,6 +15,17 @@ export default function Layout() {
           headerTintColor: "#fff",
         }}
       />
+      <Stack.Screen
+        name="addYourGoal"
+        options={{
+          headerTitle: "High Level Goals",
+          headerStyle: {
+            backgroundColor: "#49afbe",
+          },
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+        }}
+      />
     </Stack>
   );
 }

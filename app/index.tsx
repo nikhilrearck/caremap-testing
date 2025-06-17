@@ -51,7 +51,7 @@ export default function IndexScreen() {
         </Pressable>
       </Link>
       {/* ************************************************* */}
-      <Link href="/test2" push asChild>
+      <Link href="/test1" push asChild>
         <Pressable className="flex-row items-center justify-between p-4 bg-white border-b border-gray-200 mt-8">
           <View className="flex-row items-center">
             <BugAntIcon size={35} color="#34D399" />

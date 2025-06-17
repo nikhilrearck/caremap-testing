@@ -89,7 +89,7 @@ export default function GoalsScreen() {
               </Text>
             </View>
             <TouchableOpacity>
-              <Feather name="more-vertical" size={20} color="gray" />
+              <Feather name="more-vertical" size={20} color="black" />
             </TouchableOpacity>
           </View>
 
