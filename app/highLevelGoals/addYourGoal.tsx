@@ -33,7 +33,8 @@ export default function AddYourGoal() {
   const formatDate = (date: Date) => {
     const mm = String(date.getMonth() + 1).padStart(2, "0");
     const dd = String(date.getDate()).padStart(2, "0");
-    const yy = String(date.getFullYear()).slice(-2);
+    // const yy = String(date.getFullYear()).slice(-2);
+    const yy = String(date.getFullYear());
     return `${mm}-${dd}-${yy}`;
   };
 
@@ -122,6 +123,7 @@ export default function AddYourGoal() {
           mode="date"
           onConfirm={handleConfirm}
           onCancel={() => setShowPicker(false)}
+          minimumDate={new Date()} // Prevent selecting past dates
         />
 
         {/* Save Button */}
