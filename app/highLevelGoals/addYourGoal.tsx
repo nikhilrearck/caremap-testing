@@ -8,7 +8,8 @@ import {
   ScrollView,
 } from "react-native";
 // import { Feather } from "@expo/vector-icons";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+// import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { CalendarDaysIcon, Icon } from "@/components/ui/icon";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 
 export default function AddYourGoal() {
@@ -104,11 +105,15 @@ export default function AddYourGoal() {
                 editable={false}
                 pointerEvents="none"
               />
-              <MaterialCommunityIcons
-                name="calendar-month-outline"
-                size={22}
-                color="black"
+              <Icon
+                as={CalendarDaysIcon}
+                className="text-typography-500 m-1 w-5 h-5"
               />
+              {/* <MaterialCommunityIcons
+                name="calendar-month-outline"
+                size={20}
+                color="gray"
+              /> */}
             </View>
           </TouchableOpacity>
         </View>
