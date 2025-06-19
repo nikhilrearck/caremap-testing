@@ -155,6 +155,7 @@ export default function GoalsScreen() {
   );
 }
 
+// 2nd option where specific part is scrollable
 // return (
 //     <SafeAreaView className="flex-1 bg-white px-7 py-8">
 //       <View style={{ flex: 1 }}>
