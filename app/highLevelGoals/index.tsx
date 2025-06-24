@@ -25,10 +25,10 @@ import { Dimensions } from "react-native";
 const linkedGoals = [
   "Establish a consistent sleep schedule for better energy and recovery.",
   "Improve cardiovascular fitness by engaging in regular aerobic activity.",
-  "Eat more whole, unprocessed foods and cut down on added sugar.",
-  "Eat more whole, unprocessed foods and cut down on added sugar.",
-  "Improve cardiovascular fitness by engaging in regular aerobic activity.",
-  "Eat more whole, unprocessed foods and cut down on added sugar.",
+  // "Eat more whole, unprocessed foods and cut down on added sugar.",
+  // "Eat more whole, unprocessed foods and cut down on added sugar.",
+  // "Improve cardiovascular fitness by engaging in regular aerobic activity.",
+  // "Eat more whole, unprocessed foods and cut down on added sugar.",
 ];
 
 type Goal = {
@@ -43,33 +43,33 @@ const userGoals = [
     progress: 0.6,
     daysRemaining: 34,
   },
-  {
-    title: "Eat more whole, unprocessed foods and cut down on added sugar.",
-  },
-  {
-    title: "Loose 10 Kg in 3 months",
-    progress: 0.6,
-    daysRemaining: 34,
-    id: "15",
-  },
-  {
-    title: "Eat more whole, unprocessed foods and cut down on added sugar.",
-    id: "20",
-  },
-  {
-    title: "Walk 10,000 steps a day.",
-    id: "8",
-  },
-  {
-    title: "Have a healthy breakfast every morning.",
-    progress: 0.5,
-    daysRemaining: 18,
-    id: "9",
-  },
-  {
-    title: "Avoid eating after 8 PM.",
-    id: "10",
-  },
+  // {
+  //   title: "Eat more whole, unprocessed foods and cut down on added sugar.",
+  // },
+  // {
+  //   title: "Loose 10 Kg in 3 months",
+  //   progress: 0.6,
+  //   daysRemaining: 34,
+  //   id: "15",
+  // },
+  // {
+  //   title: "Eat more whole, unprocessed foods and cut down on added sugar.",
+  //   id: "20",
+  // },
+  // {
+  //   title: "Walk 10,000 steps a day.",
+  //   id: "8",
+  // },
+  // {
+  //   title: "Have a healthy breakfast every morning.",
+  //   progress: 0.5,
+  //   daysRemaining: 18,
+  //   id: "9",
+  // },
+  // {
+  //   title: "Avoid eating after 8 PM.",
+  //   id: "10",
+  // },
 ];
 
 export default function GoalsScreen() {
