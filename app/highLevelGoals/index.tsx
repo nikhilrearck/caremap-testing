@@ -119,6 +119,11 @@ export default function GoalsScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-white px-7 py-8">
+      {/* <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 20 }}
+        keyboardShouldPersistTaps="handled"
+      > */}
       {/* Linked Health System */}
       <Text className="text-lg font-semibold text-cyan-700">
         High level goals (linked Health System)
@@ -127,7 +132,7 @@ export default function GoalsScreen() {
       {/* Like hr */}
       <View className="h-px bg-gray-300 my-4" />
 
-      <View className="flex-1">
+      <View>
         <FlatList
           data={linkedGoals}
           renderItem={({ item }) => (
@@ -137,6 +142,8 @@ export default function GoalsScreen() {
           )}
           keyExtractor={(_, index) => index.toString()}
           showsVerticalScrollIndicator={false}
+          scrollEnabled={true} // Important!
+          style={{ maxHeight: 230 }}
         />
       </View>
 
@@ -148,12 +155,14 @@ export default function GoalsScreen() {
       {/* Like hr */}
       <View className="h-px bg-gray-300 my-4" />
 
-      <View className="flex-1">
+      <View>
         <FlatList
           data={userGoals}
           renderItem={renderUserGoal}
           keyExtractor={(_, index) => index.toString()}
           showsVerticalScrollIndicator={false}
+          scrollEnabled={true} // Important!
+          style={{ maxHeight: 300 }}
           ListEmptyComponent={
             <Text className="text-gray-500">No user goals found.</Text>
           }
@@ -174,6 +183,7 @@ export default function GoalsScreen() {
           <Text className="text-white font-semibold">Add your goals</Text>
         </TouchableOpacity>
       </Link>
+      {/* </ScrollView> */}
     </SafeAreaView>
   );
 }
