@@ -90,7 +90,7 @@
 
 //       {/* Modal Button */}
 //       <Pressable
-//         className="bg-[#48afbe] rounded-lg py-3 items-center"
+//         className="bg-[#48afbe] rounded-md py-3 items-center"
 //         onPress={() => setModalVisible(true)}
 //       >
 //         <Text className="text-white font-medium text-lg">
@@ -193,33 +193,33 @@ function MedicalConditionsPage({ onClose }: { onClose: () => void }) {
         </Text>
       </View>
 
-      <View className="p-4">
-        <Text className="text-lg font-semibold mb-2">
+      <View className="px-6 py-8">
+        <Text className="text-lg font-medium mb-3 text-[#48afbe]">
           Add your child's current medical condition
         </Text>
 
-        <Text className="text-gray-600 mb-2">Enter condition</Text>
         {/* <TextArea
           className="border border-gray-300 rounded-lg p-4 mb-6"
           placeholder="Type the medical condition here"
           value={condition}
           onChangeText={setCondition}
         /> */}
+
         <Textarea
-          className="border border-gray-300 rounded-lg p-4 mb-6"
           size="md"
           isReadOnly={false}
           isInvalid={false}
           isDisabled={false}
+          className="w-full"
         >
-          <TextareaInput placeholder="Your text goes here..." />
+          <TextareaInput
+            placeholder="Enter condition"
+            style={{ textAlignVertical: "top", fontSize: 16 }}
+          />
         </Textarea>
 
-        <View className="border-t border-gray-300 my-4" />
-
-        {/* <Text className="text-lg font-bold mb-4">Save</Text> */}
         <TouchableOpacity
-          className="bg-[#49AFBE] py-3 rounded-lg"
+          className="bg-[#49AFBE] py-3 rounded-md mt-3"
           onPress={() => {
             // console.log('Saved:', condition);
             // TODO: Push this to global state/local list
@@ -245,11 +245,6 @@ export default function MedicalConditions() {
     // { id: 3, name: "Condition 2", date: "18 Apr, 2025", checked: false },
     // { id: 4, name: "Condition 3", date: "18 Apr, 2025", checked: false },
     // { id: 5, name: "Condition 4", date: "18 Apr, 2025", checked: false },
-    // { id: 6, name: "Condition 5", date: "18 Apr, 2025", checked: false },
-    // { id: 7, name: "Condition 6", date: "18 Apr, 2025", checked: false },
-    // { id: 8, name: "Condition 7", date: "18 Apr, 2025", checked: false },
-    // { id: 9, name: "Condition 8", date: "18 Apr, 2025", checked: false },
-    // { id: 10, name: "Condition 9", date: "18 Apr, 2025", checked: false },
   ]);
 
   const [showAddForm, setShowAddForm] = useState(false);
@@ -352,10 +347,10 @@ export default function MedicalConditions() {
 
           {/* Add Condition Button */}
           <TouchableOpacity
-            className="bg-[#48afbe] rounded-lg py-3 items-center mt-1"
+            className="bg-[#48afbe] rounded-md py-3 items-center mt-1"
             onPress={() => setShowAddForm(true)}
           >
-            <Text className="text-white font-medium text-lg">
+            <Text className="text-white font-medium text-md">
               Add your child's current medical condition
             </Text>
           </TouchableOpacity>

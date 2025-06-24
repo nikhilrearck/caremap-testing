@@ -99,11 +99,15 @@ export default function MedicalConditionsScreen() {
       <View className="items-end mb-4">
         <TouchableOpacity
           onPress={handleDelete}
-          className={`px-4 py-1 rounded ${userConditions.some((c) => c.checked) ? "bg-teal-100" : ""}`}
+          className={`px-4 py-1 rounded ${
+            userConditions.some((c) => c.checked) ? "bg-teal-100" : ""
+          }`}
           disabled={!userConditions.some((c) => c.checked)}
         >
           <Text
-            className={`text-teal-300 ${!userConditions.some((c) => c.checked) ? "opacity-50" : ""}`}
+            className={`text-teal-300 ${
+              !userConditions.some((c) => c.checked) ? "opacity-50" : ""
+            }`}
           >
             Delete
           </Text>
@@ -112,7 +116,7 @@ export default function MedicalConditionsScreen() {
 
       {/* Add Condition Button */}
       <Pressable
-        className="bg-teal-500 rounded-md p-4 items-center"
+        className="bg-teal-500 rounded-md py-3 items-center"
         onPress={() => setShowModal(true)}
       >
         <Text className="text-white font-medium">
