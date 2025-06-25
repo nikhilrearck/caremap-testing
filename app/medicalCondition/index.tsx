@@ -177,6 +177,7 @@ import {
 import { CheckIcon } from "@/components/ui/icon";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { Textarea, TextareaInput } from "@/components/ui/textarea";
+import palette from "@/utils/theme/color";
 
 function MedicalConditionsPage({ onClose }: { onClose: () => void }) {
   //   const [condition, setCondition] = useState('');
@@ -184,7 +185,10 @@ function MedicalConditionsPage({ onClose }: { onClose: () => void }) {
   return (
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
-      <View className="py-3 bg-[#49AFBE] flex-row items-center">
+      <View
+        className="py-3 flex-row items-center"
+        style={{ backgroundColor: palette.primary }}
+      >
         <TouchableOpacity onPress={onClose} className="p-2 ml-2">
           <ChevronLeft color="white" size={24} />
         </TouchableOpacity>
@@ -194,7 +198,7 @@ function MedicalConditionsPage({ onClose }: { onClose: () => void }) {
       </View>
 
       <View className="px-6 py-8">
-        <Text className="text-lg font-medium mb-3 text-[#48afbe]">
+        <Text className="text-lg font-medium mb-3 text-teal-700">
           Add your child's current medical condition
         </Text>
 
@@ -219,7 +223,8 @@ function MedicalConditionsPage({ onClose }: { onClose: () => void }) {
         </Textarea>
 
         <TouchableOpacity
-          className="bg-[#49AFBE] py-3 rounded-md mt-3"
+          className="py-3 rounded-md mt-3"
+          style={{ backgroundColor: palette.primary }}
           onPress={() => {
             // console.log('Saved:', condition);
             // TODO: Push this to global state/local list
@@ -242,8 +247,8 @@ export default function MedicalConditions() {
       checked: false,
     },
     { id: 2, name: "Condition 1", date: "18 Apr, 2025", checked: false },
-    // { id: 3, name: "Condition 2", date: "18 Apr, 2025", checked: false },
-    // { id: 4, name: "Condition 3", date: "18 Apr, 2025", checked: false },
+    { id: 3, name: "Condition 2", date: "18 Apr, 2025", checked: false },
+    { id: 4, name: "Condition 3", date: "18 Apr, 2025", checked: false },
     // { id: 5, name: "Condition 4", date: "18 Apr, 2025", checked: false },
   ]);
 
@@ -256,7 +261,10 @@ export default function MedicalConditions() {
   return (
     <SafeAreaView className="flex-1  bg-white">
       {/* Header */}
-      <View className="py-3 bg-[#49AFBE] flex-row items-center">
+      <View
+        className="py-3 flex-row items-center"
+        style={{ backgroundColor: palette.primary }}
+      >
         <TouchableOpacity onPress={() => router.back()} className="p-2 ml-2">
           <ChevronLeft color="white" size={24} />
         </TouchableOpacity>
@@ -329,7 +337,7 @@ export default function MedicalConditions() {
                       <MaterialIcons
                         name="more-vert"
                         size={20}
-                        color="#9E9E9E"
+                        // color="#9E9E9E"
                       />
                     </TouchableOpacity>
                   </View>
@@ -347,8 +355,9 @@ export default function MedicalConditions() {
 
           {/* Add Condition Button */}
           <TouchableOpacity
-            className="bg-[#48afbe] rounded-md py-3 items-center mt-1"
+            className="rounded-md py-3 items-center mt-1"
             onPress={() => setShowAddForm(true)}
+            style={{ backgroundColor: palette.primary }}
           >
             <Text className="text-white font-medium text-md">
               Add your child's current medical condition
