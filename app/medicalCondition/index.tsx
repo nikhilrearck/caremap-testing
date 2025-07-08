@@ -243,12 +243,12 @@ export default function MedicalConditions() {
     {
       id: 1,
       name: "Irritable Bowel Syndrome (IBS)",
-      date: "18 Apr, 2025",
+      date: "04-18-25",
       checked: false,
     },
-    { id: 2, name: "Condition 1", date: "18 Apr, 2025", checked: false },
-    { id: 3, name: "Condition 2", date: "18 Apr, 2025", checked: false },
-    { id: 4, name: "Condition 3", date: "18 Apr, 2025", checked: false },
+    { id: 2, name: "Condition 1", date: "04-18-25", checked: false },
+    { id: 3, name: "Condition 2", date: "04-18-25", checked: false },
+    { id: 4, name: "Condition 3", date: "04-18-25", checked: false },
     // { id: 5, name: "Condition 4", date: "18 Apr, 2025", checked: false },
   ]);
 
